@@ -1,0 +1,139 @@
+.con3 {
+    position: relative;
+    .inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 919px;
+    }
+    h2 {
+        font-size: 43px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    h2 + p {
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+    .more {
+        a {
+            display: inline-block;
+            width: 180px;
+            height: 50px;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 15px;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            background: transparent;
+
+            i {
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 250px;
+                height: 70px;
+                background: #fff;
+                transition: 0.4s;
+                transform: skewx(-15deg);
+                position: absolute;
+                left: -260px;
+                top: -10px;
+            }
+            span {
+                position: relative;
+                transition: 0.4s;
+                z-index: 5;
+                color: #fff;
+            }
+            &:hover {
+                border-color: #fff;
+                span {
+                    color: #07255d;
+                }
+            }
+        }
+        &:hover {
+            a {
+                &::after {
+                    left: -10px;
+                }
+            }
+        }
+    }
+    .left {
+        width: 480px;
+        color: #fff;
+
+        h2 {
+            &::before {
+                content: '사회공헌';
+                display: block;
+                font-size: 25px;
+                font-weight: 300;
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            &::after {
+                content: '';
+                display: block;
+                margin-top: 20px;
+                width: 80px;
+                height: 2px;
+                background: #fff;
+            }
+        }
+        h2 + p {
+            word-break: keep-all;
+        }
+    }
+    ul {
+        width: 620px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-left: 100px;
+        li {
+            margin-bottom: 25px;
+            a {
+                div {
+                    width: 275px;
+                    height: 175px;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+
+                    img {
+                        width: 100%;
+                        height: 175px;
+                    }
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                strong {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 45%;
+        height: 100%;
+        background: #07255d;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -10;
+    }
+}

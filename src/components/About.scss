@@ -1,0 +1,142 @@
+.con4 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-image: url(http://www.kyungdong.co.kr/ko/front/image/main/main_foot_bg.jpg);
+
+    .inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 480px;
+    }
+    .left {
+        width: 480px;
+        color: #fff;
+
+        h2 {
+            font-size: 43px;
+            font-weight: 500;
+            margin-bottom: 25px;
+
+            span {
+                display: block;
+                font-weight: 300;
+            }
+        }
+        h2 + p {
+            font-size: 17px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            width: 383px;
+        }
+    }
+
+    .more {
+        a {
+            display: inline-block;
+            width: 180px;
+            height: 50px;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 15px;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            background: transparent;
+
+            i {
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 250px;
+                height: 70px;
+                transition: 0.4s;
+                transform: skewx(-15deg);
+                position: absolute;
+                left: -260px;
+                top: -10px;
+                background: #fff;
+            }
+
+            span {
+                position: relative;
+                transition: 0.4s;
+                z-index: 5;
+            }
+            &:hover {
+                background-color: #fff;
+                border-color: #fff;
+
+                span {
+                    color: #222;
+                }
+            }
+        }
+        &:hover {
+            a {
+                &::after {
+                    left: -10px;
+                }
+            }
+        }
+    }
+    ul {
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            a {
+                color: #fff;
+                width: 220px;
+                height: 220px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                > span {
+                    display: block;
+                    height: 50px;
+                    margin-bottom: 5px;
+                }
+
+                strong {
+                    font-size: 15px;
+                    text-align: center;
+                    font-weight: 300;
+
+                    > span {
+                        font-size: 18px;
+                        display: block;
+                        margin-top: 10px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            &:nth-child(1) {
+                a {
+                    background: rgba(244, 104, 17, 0.7);
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    background: rgba(12, 21, 47, 0.7);
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    background: rgba(7, 37, 93, 0.7);
+                }
+            }
+        }
+    }
+}

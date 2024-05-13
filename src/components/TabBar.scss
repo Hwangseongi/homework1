@@ -1,0 +1,64 @@
+#gnb {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 175px;
+        background: #999;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    li {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            display: block;
+            color: #999;
+            padding-left: 20px;
+            white-space: nowrap;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                top: 50%;
+                left: 0.5px;
+                transform: translate(-50%, -50%);
+            }
+            &::before {
+                width: 7px;
+                height: 7px;
+                background: #999;
+            }
+            &::after {
+                width: 23px;
+                height: 23px;
+                border: 2px solid #999;
+                left: -13px;
+                transform: translateY(-50%);
+                display: none;
+            }
+        }
+        &.on {
+            a {
+                &::before,
+                &::after {
+                    display: block;
+                }
+            }
+        }
+    }
+}

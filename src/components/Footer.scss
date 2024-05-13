@@ -1,0 +1,21 @@
+#footer {
+    background: #131313;
+    .inner {
+        padding: 40px 0 0 0;
+        height: 164px;
+        margin: 0 360px;
+    }
+    p {
+        font-size: 13px;
+        color: #fff;
+        font-weight: 300;
+        &:nth-child(4) {
+            margin-top: 10px;
+        }
+    }
+    .top {
+        position: absolute;
+        right: -50px;
+        top: -70px;
+    }
+}
